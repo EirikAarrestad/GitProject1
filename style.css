@@ -1,4 +1,79 @@
-label {
+/* Typography - Applies to headings h1 and h2 */
+h1,
+h2 {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    margin: 0 5px 5px 0;
+    cursor: default;
+}
+
+/* Form elements - Applies to select and input elements */
+select {
+    background-color: transparent;
+    border: black solid 1px;
+    font-size: 15px;
+    border-radius: 3px;
+    outline: none;
+}
+
+/* Container element - Applies to an element with the class 'container' */
+.container {
+    padding: 20px;
+}
+
+/* Main element - Applies to the main element */
+main {
+    margin: 10px 0 0 0;
+}
+
+input {
+    font-size: 15px;
+    outline: none;
+    border: none;
+    border-bottom: 1.5px solid black;
+    background-color: rgb(245, 245, 245);
+    color: #0087ca;
+    width: 100px;
+}
+
+/* Span header - Applies to an element with the ID 'spanHeader' */
+#spanHeader {
+    display: inline-block;
+    position: relative;
+    color: #0087ca;
+}
+
+/* Span header after pseudo-element - Applies to the ::after pseudo-element of the element with the ID 'spanHeader' */
+#spanHeader::after {
+    content: "";
     position: absolute;
-    top: 60px;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+/* Span header after pseudo-element on hover - Applies to the ::after pseudo-element of the element with the ID 'spanHeader' when it is hovered over */
+#spanHeader:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Button - Applies to a button element */
+button {
+    color: #0087ca;
+    background-color: transparent;
+    border: #0087ca solid 1.5px;
+    padding: 2px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    transition-duration: 0.4s;
+}
+
+/* Button on hover - Applies to a button element when it is hovered over */
+button:hover {
+    color: white;
+    background-color: #0087ca;
 }
