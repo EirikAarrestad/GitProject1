@@ -2,17 +2,34 @@
 h1,
 h2 {
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-    margin: 0 5px 5px 0;
     cursor: default;
+    margin: 0 5px 5px 0;
+}
+
+/* Apply margin to only h2 headings */
+h2 {
+    margin-bottom: 25px;
 }
 
 /* Form elements - Applies to select and input elements */
 select {
     background-color: transparent;
     border: black solid 1px;
-    font-size: 15px;
     border-radius: 3px;
+    font-size: 15px;
     outline: none;
+    width: 50px;
+}
+
+/* Apply styling to input elements */
+input {
+    background-color: rgb(245, 245, 245);
+    border: none;
+    border-bottom: 1.5px solid black;
+    color: #0087ca;
+    font-size: 15px;
+    outline: none;
+    width: 100px;
 }
 
 /* Container element - Applies to an element with the class 'container' */
@@ -25,35 +42,25 @@ main {
     margin: 10px 0 0 0;
 }
 
-input {
-    font-size: 15px;
-    outline: none;
-    border: none;
-    border-bottom: 1.5px solid black;
-    background-color: rgb(245, 245, 245);
-    color: #0087ca;
-    width: 100px;
-}
-
 /* Span header - Applies to an element with the ID 'spanHeader' */
 #spanHeader {
+    color: #0087ca;
     display: inline-block;
     position: relative;
-    color: #0087ca;
 }
 
 /* Span header after pseudo-element - Applies to the ::after pseudo-element of the element with the ID 'spanHeader' */
 #spanHeader::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
-    left: 0;
     background-color: #0087ca;
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    transform: scaleX(0);
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
+    width: 100%;
 }
 
 /* Span header after pseudo-element on hover - Applies to the ::after pseudo-element of the element with the ID 'spanHeader' when it is hovered over */
@@ -65,17 +72,25 @@ input {
 /* Button - Applies to a button element */
 button,
 #clearButton {
-    color: #0087ca;
     background-color: transparent;
     border: #0087ca solid 1.5px;
-    padding: 2px;
+    color: #0087ca;
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    padding: 2px;
     transition-duration: 0.4s;
 }
 
 /* Button on hover - Applies to a button element when it is hovered over */
 button:hover,
 #clearButton:hover {
-    color: white;
     background-color: #0087ca;
+    color: white;
+}
+
+/* Apply styling to label elements */
+label {
+    color: #0087ca;
+    font-style: italic;
+    position: absolute;
+    top: 102px;
 }

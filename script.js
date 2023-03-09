@@ -27,21 +27,29 @@ calculateButton.addEventListener("click", () => {
         return; // stop further execution
     }
 
+    function showResults(nr1, operator, nr2, result) {
+        output.textContent = `${nr1} ${operator} ${nr2} = ${result}`;
+    }
+
     // Determine which operator was selected
     const operatorType = operator.value;
 
+    let operatorString;
     let result;
     switch (operatorType) {
         case "addition":
             // Perform addition operation
+            operatorString = "+";
             result = numberOne + numberTwo;
             break;
         case "subtraction":
             // Perform subtraction operation
+            operatorString = "-";
             result = numberOne - numberTwo;
             break;
         case "multiplication":
             // Perform multiplication operation
+            operatorString = "*";
             result = numberOne * numberTwo;
             break;
         case "division":
@@ -51,10 +59,12 @@ calculateButton.addEventListener("click", () => {
                 return; // stop further execution
             }
             // Perform division operation
+            operatorString = "/";
             result = numberOne / numberTwo;
             break;
         case "exponent":
             // Perform exponent operation
+            operatorString = "^";
             result = Math.pow(numberOne, numberTwo);
             break;
         default:
@@ -62,7 +72,5 @@ calculateButton.addEventListener("click", () => {
             output.textContent = "Error: Please select an operator";
             return; // stop further execution
     }
-
-    // Display the result in the output element
-    output.textContent = result;
+    showResults(numberOne, operatorString, numberTwo, result);
 });
