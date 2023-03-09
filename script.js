@@ -6,7 +6,9 @@ const operator = document.querySelector("#operatorSelect");
 const calculateButton = document.querySelector("#calculateButton");
 const clearButton = document.querySelector("#clearButton");
 
+// Add a click event listener to the clear button
 clearButton.addEventListener("click", () => {
+    // Clear the input fields and output area
     inputNumberOne.value = "";
     inputNumberTwo.value = "";
     output.textContent = "";
@@ -15,34 +17,50 @@ clearButton.addEventListener("click", () => {
 // Add a click event listener to the calculate button
 calculateButton.addEventListener("click", () => {
     // Get the values of the input numbers
-    var numberOne = Number(inputNumberOne.value);
-    var numberTwo = Number(inputNumberTwo.value);
+    const numberOne = Number(inputNumberOne.value);
+    const numberTwo = Number(inputNumberTwo.value);
 
     // Check if the input values are valid numbers
     if (isNaN(numberOne) || isNaN(numberTwo)) {
+        // Display an error message if input is not a number
         output.textContent = "Error: Please enter valid numbers";
         return; // stop further execution
     }
 
     // Determine which operator was selected
-    var operatorType = operator.value;
+    const operatorType = operator.value;
 
-    // Calculate the result based on the selected operator
+    let result;
     switch (operatorType) {
         case "addition":
+            // Perform addition operation
             result = numberOne + numberTwo;
             break;
         case "subtraction":
+            // Perform subtraction operation
             result = numberOne - numberTwo;
             break;
         case "multiplication":
+            // Perform multiplication operation
             result = numberOne * numberTwo;
             break;
         case "division":
+            // Check if dividing by zero
+            if (numberTwo === 0) {
+                output.textContent = "Error: Cannot divide by zero";
+                return; // stop further execution
+            }
+            // Perform division operation
             result = numberOne / numberTwo;
             break;
         case "exponent":
-            result = numberOne ** numberTwo;
+            // Perform exponent operation
+            result = Math.pow(numberOne, numberTwo);
+            break;
+        default:
+            // Display an error message if no operator is selected
+            output.textContent = "Error: Please select an operator";
+            return; // stop further execution
     }
 
     // Display the result in the output element
