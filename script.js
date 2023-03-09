@@ -41,6 +41,8 @@ calculateButton.addEventListener("click", () => {
         case "division":
             result = numberOne / numberTwo;
             break;
+        case "exponent":
+            result = numberOne ** numberTwo;
     }
 
     // Display the result in the output element
