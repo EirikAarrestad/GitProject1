@@ -1,10 +1,10 @@
 // Get references to the HTML elements we need
-const inputNumberOne = document.querySelector("#inputNr1");
-const inputNumberTwo = document.querySelector("#inputNr2");
-const output = document.querySelector("#output");
-const operator = document.querySelector("#operatorSelect");
-const calculateButton = document.querySelector("#calculateButton");
-const clearButton = document.querySelector("#clearButton");
+const inputNumberOne = document.querySelector("#number1");
+const inputNumberTwo = document.querySelector("#number2");
+const output = document.querySelector("#result");
+const operator = document.querySelector("#operator");
+const calculateButton = document.querySelector("#calculate");
+const clearButton = document.querySelector("#clear");
 
 // Add a click event listener to the clear button
 clearButton.addEventListener("click", () => {

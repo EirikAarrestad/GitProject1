@@ -9,23 +9,25 @@
     </head>
     <body>
         <div class="container">
-            <h1><span id="spanHeader">First</span> git project</h1>
-            <h2>Calculator obviously</h2>
+            <header>
+                <h1><span id="mainHeader">First</span> git project</h1>
+                <h2>Calculator obviously</h2>
+            </header>
             <main>
-                <label for="inputNr1">Tall nr 1</label>
-                <input id="inputNr1" />
-                <select id="operatorSelect">
+                <label for="number1">Tall nr 1</label>
+                <input id="number1" />
+                <select id="operator">
                     <option value="addition">+</option>
                     <option value="subtraction">-</option>
                     <option value="multiplication">*</option>
                     <option value="division">/</option>
                     <option value="exponent">n^x</option>
                 </select>
-                <label for="inputNr2">Tall nr 2</label>
-                <input id="inputNr2" />
-                <button id="calculateButton">Calculate</button>
-                <button id="clearButton">Clear</button>
-                <p id="output"></p>
+                <label for="number2">Tall nr 2</label>
+                <input id="number2" />
+                <button id="calculate" class="action-button">Calculate</button>
+                <button id="clear" class="action-button">Clear</button>
+                <p id="result"></p>
             </main>
         </div>
         <script src="./script.js" defer></script>

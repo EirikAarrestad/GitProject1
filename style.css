@@ -42,15 +42,15 @@ main {
     margin: 10px 0 0 0;
 }
 
-/* Span header - Applies to an element with the ID 'spanHeader' */
-#spanHeader {
+/* Span header - Applies to an element with the ID 'mainHeader' */
+#mainHeader {
     color: #0087ca;
     display: inline-block;
     position: relative;
 }
 
-/* Span header after pseudo-element - Applies to the ::after pseudo-element of the element with the ID 'spanHeader' */
-#spanHeader::after {
+/* Span header after pseudo-element - Applies to the ::after pseudo-element of the element with the ID 'mainHeader' */
+#mainHeader::after {
     background-color: #0087ca;
     bottom: 0;
     content: "";
@@ -63,26 +63,25 @@ main {
     width: 100%;
 }
 
-/* Span header after pseudo-element on hover - Applies to the ::after pseudo-element of the element with the ID 'spanHeader' when it is hovered over */
-#spanHeader:hover::after {
+/* Span header after pseudo-element on hover - Applies to the ::after pseudo-element of the element with the ID 'mainHeader' when it is hovered over */
+#mainHeader:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
 
 /* Button - Applies to a button element */
-button,
-#clearButton {
+.action-button {
     background-color: transparent;
     border: #0087ca solid 1.5px;
     color: #0087ca;
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     padding: 2px;
     transition-duration: 0.4s;
+    margin-top: 10px;
 }
 
 /* Button on hover - Applies to a button element when it is hovered over */
-button:hover,
-#clearButton:hover {
+.action-button:hover {
     background-color: #0087ca;
     color: white;
 }
@@ -93,4 +92,10 @@ label {
     font-style: italic;
     position: absolute;
     top: 102px;
+}
+
+/* Apply styling to output-field elements */
+.output-field {
+    font-size: 20px;
+    margin-top: 20px;
 }
