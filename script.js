@@ -15,10 +15,20 @@ calculateButton.addEventListener("click", () => {
     var operatorType = operator.value;
 
     // Calculate the result based on the selected operator
-    var result =
-        operatorType == "addition"
-            ? numberOne + numberTwo
-            : numberOne - numberTwo;
+    switch (operatorType) {
+        case "addition":
+            result = numberOne + numberTwo;
+            break;
+        case "subtraction":
+            result = numberOne - numberTwo;
+            break;
+        case "multiplication":
+            result = numberOne * numberTwo;
+            break;
+        case "division":
+            result = numberOne / numberTwo;
+            break;
+    }
 
     // Display the result in the output element
     output.textContent = result;
