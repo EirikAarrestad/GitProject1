@@ -12,6 +12,7 @@ h2 {
     font-weight: lighter;
     color: #0087ca;
     margin-top: 0px;
+    font-size: 17px;
 }
 
 /* Form elements - Applies to select and input elements */
@@ -35,9 +36,27 @@ input {
     width: 100px;
 }
 
+html {
+    height: 400px;
+}
+
+body {
+    z-index: 1;
+    padding-top: 180px;
+    background: linear-gradient(157deg, #007bb8 49%, #0087ca 49%);
+    background-repeat: no-repeat;
+    background-size: 1290px 570px;
+}
+
 /* Container element - Applies to an element with the class 'container' */
 .container {
+    background-color: white;
     padding: 20px;
+    border: black solid 2px;
+    width: fit-content;
+    margin: 0 auto;
+    z-index: 2;
+    height: 132.5px;
 }
 
 /* Main element - Applies to the main element */
@@ -94,11 +113,11 @@ label {
     color: #0087ca;
     font-style: italic;
     position: absolute;
-    top: 102px;
+    top: 290px;
 }
 
 /* Apply styling to output-field elements */
-.output-field {
+#output-field {
     font-size: 20px;
-    margin-top: 20px;
+    margin-top: 10px;
 }
