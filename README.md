@@ -1,3 +1,3 @@
 # Mitt første github prosjekt
 
-idk hva annet jeg skal skrive her
+Dette er en enkel kalkulator med HTML, Javascript og CSS

@@ -63,7 +63,8 @@ input {
 }
 
 /* Button - Applies to a button element */
-button {
+button,
+#clearButton {
     color: #0087ca;
     background-color: transparent;
     border: #0087ca solid 1.5px;
@@ -73,7 +74,8 @@ button {
 }
 
 /* Button on hover - Applies to a button element when it is hovered over */
-button:hover {
+button:hover,
+#clearButton:hover {
     color: white;
     background-color: #0087ca;
 }
