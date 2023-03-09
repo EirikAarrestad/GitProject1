@@ -9,6 +9,9 @@ h2 {
 /* Apply margin to only h2 headings */
 h2 {
     margin-bottom: 25px;
+    font-weight: lighter;
+    color: #0087ca;
+    margin-top: 0px;
 }
 
 /* Form elements - Applies to select and input elements */
